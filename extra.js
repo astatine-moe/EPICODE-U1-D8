@@ -26,8 +26,8 @@ log(1, "Normal array:", normalArr, "Reversed array:", reverseArr);
 /* WRITE YOUR ANSWER HERE */
 let numbers = [412, 56, 45, 51, 57, 15, 872, 15];
 
-let highest = 0;
-for (let i = 0; i < numbers.length; i++) {
+let highest = numbers[0];
+for (let i = 1; i < numbers.length; i++) {
     if (numbers[i] > highest) {
         highest = numbers[i];
     }
@@ -41,13 +41,13 @@ log(2, "Numbers:", numbers, "Max:", highest);
 
 /* WRITE YOUR ANSWER HERE */
 let lowest = numbers[0];
-for (let i = 0; i < numbers.length; i++) {
+for (let i = 1; i < numbers.length; i++) {
     if (numbers[i] < lowest) {
         lowest = numbers[i];
     }
 }
 
-log(3, "Numbers:", numbers, "Min:", min);
+log(3, "Numbers:", numbers, "Min:", lowest);
 
 /* EXTRA 4
  Write a piece of code for getting only even numerical values from an array.
