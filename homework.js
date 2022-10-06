@@ -1,5 +1,8 @@
 const log = (exercise, ...messages) => {
-    console.log("[EXERCISE " + exercise + "]: ", messages.join(" "), "\n");
+    console.log(
+        "\n--------------- EXERCISE " + exercise + " ---------------\n",
+        messages.join("\n")
+    );
 };
 
 /*
@@ -70,7 +73,7 @@ const totalShoppingCart = 30;
 let shippingCost = totalShoppingCart > 50 ? 0 : 10;
 let total = totalShoppingCart + shippingCost;
 
-log(6, "Total cart:", totalShoppingCart, "- Shipping cost:", shippingCost);
+log(6, "Total cart:", totalShoppingCart, "Shipping cost:", shippingCost);
 
 /* EXERCISE 7
  You are working on an e-commerce website. Today is Black Friday and everything has a 20% discount at the end of the purchase.
@@ -88,13 +91,13 @@ log(
     7,
     "Total cart:",
     totalShoppingCart,
-    "- Discount:",
+    "Discount:",
     totalDiscount,
-    "- Total cart with discount:",
+    "Total cart with discount:",
     totalCart,
-    "- Shipping cost:",
+    "Shipping cost:",
     shippingCostDiscount,
-    "- Total cost:",
+    "Total cost:",
     totalCost
 );
 
@@ -110,25 +113,25 @@ const car = {
     licensePlate: "TEST123",
 };
 
-const car2 = { ...car, licensePlate: "TEST456" };
-const car3 = { ...car, licensePlate: "TEST789" };
-const car4 = { ...car, licensePlate: "TEST101" };
-const car5 = { ...car, licensePlate: "TEST112" };
-const car6 = { ...car, licensePlate: "TEST131" };
+const car2 = { ...car, licensePlate: "TEST456" },
+    car3 = { ...car, licensePlate: "TEST789" },
+    car4 = { ...car, licensePlate: "TEST101" },
+    car5 = { ...car, licensePlate: "TEST112" },
+    car6 = { ...car, licensePlate: "TEST131" };
 
 log(
     8,
     "Car 1 plate:",
     car.licensePlate,
-    "- Car 2 plate:",
+    "Car 2 plate:",
     car2.licensePlate,
-    "- Car 3 plate:",
+    "Car 3 plate:",
     car3.licensePlate,
-    "- Car 4 plate:",
+    "Car 4 plate:",
     car4.licensePlate,
-    "- Car 5 plate:",
+    "Car 5 plate:",
     car5.licensePlate,
-    "- Car 6 plate:",
+    "Car 6 plate:",
     car6.licensePlate
 );
 
@@ -156,9 +159,9 @@ log(
     11,
     "Car type:",
     typeof car,
-    "- License plate type:",
+    "License plate type:",
     typeof car.licensePlate,
-    "- Brand type:",
+    "Brand type:",
     typeof car.brand
 );
 
@@ -182,6 +185,6 @@ let totalCars = carsForSale.length + carsForRent.length;
 log(13, "Cars for sale:");
 for (const car of carsForSale) {
     console.log(
-        `Car: ${car.brand} ${car.model} - License plate: ${car.licensePlate}`
+        `Car: ${car.brand} ${car.model} License plate: ${car.licensePlate}`
     );
 }

@@ -1,8 +1,7 @@
 const log = (exercise, ...messages) => {
     console.log(
-        "[EXTRA EXERCISE " + exercise + "]: ",
-        messages.join(" "),
-        "\n"
+        "\n---------- EXTRA EXERCISE " + exercise + " ---------\n",
+        messages.join("\n")
     );
 };
 
@@ -18,7 +17,7 @@ const log = (exercise, ...messages) => {
 let normalArr = [1, 3, 5];
 let reverseArr = [...normalArr].reverse(); //.reverse() is destructive, so we need to create a copy of the array first before assigning it to a variable
 
-log(1, "Normal array:", normalArr, "- Reversed array:", reverseArr);
+log(1, "Normal array:", normalArr, "Reversed array:", reverseArr);
 
 /* EXTRA 2
  Write a piece of code for getting the maximum numerical value from an array.
@@ -28,7 +27,7 @@ log(1, "Normal array:", normalArr, "- Reversed array:", reverseArr);
 let numbers = [412, 56, 45, 51, 57, 15, 872, 15];
 let max = Math.max(...numbers); //use the spread syntax to pass the array as arguments to Math max, Math max will return the highest number
 
-log(2, "Numbers:", numbers, "- Max:", max);
+log(2, "Numbers:", numbers, "Max:", max);
 
 /* EXTRA 3
  Write a piece of code for getting the minimum numerical value from an array.
@@ -37,7 +36,7 @@ log(2, "Numbers:", numbers, "- Max:", max);
 /* WRITE YOUR ANSWER HERE */
 let min = Math.min(...numbers); //use the spread syntax to pass the array as arguments to Math min, Math min will return the lowest number
 
-log(3, "Numbers:", numbers, "- Min:", min);
+log(3, "Numbers:", numbers, "Min:", min);
 
 /* EXTRA 4
  Write a piece of code for getting only even numerical values from an array.
@@ -45,7 +44,7 @@ log(3, "Numbers:", numbers, "- Min:", min);
 
 /* WRITE YOUR ANSWER HERE */
 let evenNumbers = numbers.filter((number) => number % 2 === 0); //filter method with modulo operator to check if the number is even, any element that returns true will pass the filter
-log(4, "Numbers:", numbers, "- Even numbers:", evenNumbers);
+log(4, "Numbers:", numbers, "Even numbers:", evenNumbers);
 
 /* EXTRA 5
  Write a piece of code for deleting only even entries from an array.
@@ -53,7 +52,7 @@ log(4, "Numbers:", numbers, "- Even numbers:", evenNumbers);
 
 /* WRITE YOUR ANSWER HERE */
 let oddNumbers = numbers.filter((number) => number % 2 !== 0); //filter method with modulo operator to check if the number is odd, any element that returns true will pass the filter
-log(5, "Numbers:", numbers, "- Odd numbers:", oddNumbers);
+log(5, "Numbers:", numbers, "Odd numbers:", oddNumbers);
 
 /* EXTRA 6
  Write a piece of code for removing all the vowels from a string.
@@ -64,7 +63,7 @@ let string = "This is a string with vowels";
 let vowelRegex = /[aeiou]/gi; //regex to match all vowels, g flag to match all occurrences, i flag to ignore case
 let noVowels = string.replace(vowelRegex, ""); //replace method to replace all vowels with an empty string
 
-log(6, "String:", string, "- No vowels:", noVowels);
+log(6, "String:", string, "No vowels:", noVowels);
 
 /* EXTRA 7
  Write a piece of code for increasing all the numerical values in a array by 1.
@@ -74,7 +73,7 @@ log(6, "String:", string, "- No vowels:", noVowels);
 let numbers2 = [412, 56, 45, 51, 57, 15, 872, 15];
 let numbers2Plus1 = numbers2.map((number) => number + 1); //map method to iterate over the array and add 1 to each element
 
-log(7, "Numbers:", numbers2, "- Numbers + 1:", numbers2Plus1);
+log(7, "Numbers:", numbers2, "Numbers + 1:", numbers2Plus1);
 
 /* EXTRA 8 
  Replace all the strings contained in an array with their length.
@@ -85,4 +84,4 @@ log(7, "Numbers:", numbers2, "- Numbers + 1:", numbers2Plus1);
 let words = ["strive", "is", "great"];
 let wordsLength = words.map((word) => word.length); //map is a method that loops the array and returns a new array with the return values
 
-log(8, "Words:", words, "- Words length:", wordsLength);
+log(8, "Words:", words, "Words length:", wordsLength);
