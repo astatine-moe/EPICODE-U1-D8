@@ -25,16 +25,27 @@ log(1, "Normal array:", normalArr, "Reversed array:", reverseArr);
 
 /* WRITE YOUR ANSWER HERE */
 let numbers = [412, 56, 45, 51, 57, 15, 872, 15];
-let max = Math.max(...numbers); //use the spread syntax to pass the array as arguments to Math max, Math max will return the highest number
 
-log(2, "Numbers:", numbers, "Max:", max);
+let highest = 0;
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > highest) {
+        highest = numbers[i];
+    }
+}
+
+log(2, "Numbers:", numbers, "Max:", highest);
 
 /* EXTRA 3
  Write a piece of code for getting the minimum numerical value from an array.
 */
 
 /* WRITE YOUR ANSWER HERE */
-let min = Math.min(...numbers); //use the spread syntax to pass the array as arguments to Math min, Math min will return the lowest number
+let lowest = numbers[0];
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < lowest) {
+        lowest = numbers[i];
+    }
+}
 
 log(3, "Numbers:", numbers, "Min:", min);
 
